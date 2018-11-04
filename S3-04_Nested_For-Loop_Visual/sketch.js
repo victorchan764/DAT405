@@ -15,16 +15,12 @@ function draw() {
       //Draw the shape at the corresponding position
       //This will generate a dynamic position for the x and y
       //The shape is redrawn as many times as the loop says (in this case 100)
+      //Draw the background shapes
       fill(215, 200, 170);
       rect(size * x, size * y, size, size);
-
+      //Draw the background shapes with a random RGB colour
       fill(random(255), random(255), random(255));
-
-<<<<<<< HEAD
       rect(12.5+size * x, 12.5+size * y, size/2, size/2);
-=======
-      rect(12.5+size + x, 12.5+size + y, size/2, size/2);
->>>>>>> 17223e256a16f81521828b15817bcd402ca04217
     }
   }
 }
