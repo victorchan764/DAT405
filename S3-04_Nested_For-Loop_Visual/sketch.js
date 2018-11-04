@@ -20,7 +20,11 @@ function draw() {
 
       fill(random(255), random(255), random(255));
 
+<<<<<<< HEAD
       rect(12.5+size * x, 12.5+size * y, size/2, size/2);
+=======
+      rect(12.5+size + x, 12.5+size + y, size/2, size/2);
+>>>>>>> 17223e256a16f81521828b15817bcd402ca04217
     }
   }
 }
