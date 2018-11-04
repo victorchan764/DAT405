@@ -18,6 +18,10 @@ function draw() {
       //This will generate a dynamic position for the x and y
       //The shape is redrawn as many times as the loop says (in this case 100)
       rect(size * x, size * y, size, size);
+
+      fill(random(255), random(255), random(255));
+
+      rect(12.5+size + x, 12.5+size + y, size/2, size/2);
     }
   }
 }
