@@ -29,7 +29,7 @@ function ellipses(x, y){
   var x = random(500);
   var y = random(500);
   var size1 = random(200);
-  //Background rect()
+  //Background ellipse()
   fill(random(255), random(255), random(255), random(255));
   ellipse(x, y, size1, size1);
 

@@ -1,0 +1,39 @@
+//DAT405 / GAD405
+//00_Template
+//The purpose of this sketch is to provide a basic template
+//for P5.js projects
+let size;
+
+function setup() {
+  createCanvas(500,500);
+  frameRate(3);
+  noStroke();
+}
+
+function draw() {
+  sizeRandom = random(200);
+  xRandom = random (width);
+  yRandom = random (height);
+  customShape(xRandom, yRandom, sizeRandom);
+}
+
+function customShape(x, y, size){
+  stroke(0);
+  strokeWeight(1);
+  fill(255);
+  ellipse(x, y, size, size);
+
+  strokeWeight(5);
+  ellipse(x, y, size/2, size/2);
+
+  strokeWeight(1);
+  ellipse(x, y, size/4, size/4);
+
+  stroke(0, 0, 255);
+  strokeWeight(5);
+  ellipse(x, y, size/6, size/6);
+
+  noStroke();
+  fill(255, 0, 0)
+  ellipse(x, y, size/8, size/8);
+}
