@@ -1,23 +1,43 @@
-//DAT405 / GAD405
-//00_Template
-//The purpose of this sketch is to provide a basic template
-//for P5.js projects
+let sizeRandom = 50;
+let xRandom;
+let yRandom;
+let x1Random;
+let y1random;
+let state;
 
-//Initialization function
 function setup() {
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Initialization: OK")
   createCanvas(500,500);
+  frameRate(5);
+  noStroke();
+  background(0);
 }
 
-//Rendering function
 function draw() {
-  //Set a background color
-  background(255, 0, 255);
+  sizeRandom = random(50, 300);
+  xRandom = random(width);
+  yRandom = random(height);
+  x1Random = random(width);
+  y1Random = random(height);
+  customShape(xRandom, yRandom, sizeRandom);
+}
 
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Rendering...")
-  noLoop();
+function customShape(x, y, size) {
+if (state == 1) {
+  fill(random(255), random(255), random(255), random(255));
+  ellipse(x, y, size, size);
+}
+  else if (state == 2) {
+    fill(random(255), random(255), random(255), random(255));
+    rect(x, y, size, size);
+  }
+  else if (state == 3) {
+    fill(random(255), random(255), random(255), random(255));
+    triangle(x, y, x1Random, y1Random, size, size);
+  }
+}
+
+function keyPressed() {
+    if (key == '1') state = 1;
+    if (key == '2') state = 2;
+    if (key == '3') state = 3;
 }
