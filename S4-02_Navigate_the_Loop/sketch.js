@@ -14,15 +14,15 @@ function setup() {
 }
 
 function draw() {
-  background(backImg);
-  rects(xPlusOne, yPlusOne);
+  background(0);
+  //rects(xPlusOne, yPlusOne);
 
   //Run the nested loop for x, and y
-  //for (let y = 0; y < 5; y++) {
-    //for (let x = 0; x < 5; x++) {
-      //rects (Math.round(random(4)), Math.round(random(4)));
-    //}
-  //}
+  for (let y = 0; y < 5; y++) {
+    for (let x = 0; x < 5; x++) {
+      rects (Math.round(random(4)), Math.round(random(4)));
+    }
+  }
 }
 
 function rects(x, y){

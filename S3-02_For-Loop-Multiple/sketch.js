@@ -1,23 +1,24 @@
 //DAT405 / GAD405
-//00_Template
-//The purpose of this sketch is to provide a basic template
-//for P5.js projects
+//S3-02_For-Loop-Multiple
 
-//Initialization function
+//Define the variable for the size
+let size = 50;
+
 function setup() {
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Initialization: OK")
-  createCanvas(500,500);
+  createCanvas(500, 500);
+  noLoop();
 }
 
-//Rendering function
 function draw() {
-  //Set a background color
-  background(255, 0, 255);
-
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Rendering...")
-  noLoop();
+  background(200);
+  fill(215, 0, 170);
+  //For-loop that will create 10 shapes on the window
+  for (let x = 0; x < 10; x++) {
+    //x position is adjusted by the variable x (+1 on each loop)
+    //Thus, x goes from 0 to 10. Multiplying by 50 it will create this sequence:
+    //0, 50, 100, 150, 200, 250, 300, 350, 400, 450
+    rect(x*size, 0, size, size);
+    rect(x*size, height/2-size/2, size, size);
+    rect(x*size, height-size, size, size);
+  }
 }

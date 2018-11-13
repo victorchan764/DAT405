@@ -11,7 +11,7 @@ function setup() {
 
   //Set up the frame rate (frames per second)
   //Default is 60 fps
-  frameRate(30);
+  frameRate(1);
 
   //Preferences for the text (size, and alignment)
   textSize(20);
