@@ -5,15 +5,27 @@
 
 //Initialization function
 function setup() {
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
+
   createCanvas(500,500);
-  background (0);
 }
 
-//Rendering function
 function draw() {
-stroke(random(255),random(255),random(255));
-fill(random(255),random(255),random(255));
-ellipse(mouseX,mouseY,50,50);
+  background(0);
+  var x1 = map(mouseX, 0, width, 0, 255);
+  var x2 = map(mouseY, 0, width, 0, 255);
+  var x3 = map(mouseX, 0, width, 255, 0);
+  var x4 = map(mouseY, 0, width, 255, 0);
+
+  fill(255, 0, 0, x1);
+  rect(0, 0, 250, 250);
+
+  fill(0, 255, 0, x2);
+  rect(250, 0, 250, 250);
+
+  fill(0, 0, 255, x3);
+  rect(0, 250, 250, 250);
+
+  fill(0, 255, 255, x4);
+  rect(250, 250, 250, 250);
+
 }
