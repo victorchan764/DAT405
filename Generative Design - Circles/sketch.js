@@ -1,6 +1,3 @@
-//DAT405 / GAD405
-//04_Exercise01 - Loops and Random Color
-
 let size = 100;
 let backImg;
 let xPlusOne = 0;
@@ -14,7 +11,6 @@ function setup() {
 }
 
 function draw() {
-  //background(80);
   ellipses(xPlusOne, yPlusOne);
 
   //Run the nested loop for x, and y
@@ -33,9 +29,7 @@ function ellipses(x, y){
   fill(random(255), random(255), random(255), random(255));
   ellipse(x, y, size1, size1);
 
-  //Draw the foreground shapes with a random RGB color
-  //Create a slight offeset for the x and y, to appear in the middle
-;}
+}
 
 function keyPressed() {
   if (key == 'd' || key == 'D') xPlusOne++;
