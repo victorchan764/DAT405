@@ -6,6 +6,9 @@ body{
   margin: 0;
   display: flex;
 
+/* Centers the sketch horizontally */
   justify-content: center;
+
+/* Centers the sketch vertically */
   align-items: center;
 }
