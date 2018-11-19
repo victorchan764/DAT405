@@ -4,6 +4,7 @@
 let tileCountX = 25;
 let tileCountY = 10;
 
+//Setting the Arrays
 let hueValues = [];
 let saturationValues = [];
 let brightnessValues = [];
