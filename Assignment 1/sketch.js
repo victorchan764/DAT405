@@ -12,6 +12,7 @@ let brightnessValues = [];
 function setup() {
   createCanvas(594, 841);
   colorMode(HSB, 360, 100, 100, 100);
+  //Stroke weight for individual tiles
   strokeWeight(5);
 
   // init with random values
