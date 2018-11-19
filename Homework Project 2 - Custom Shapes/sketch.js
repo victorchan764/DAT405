@@ -37,7 +37,7 @@ if (state == 1) {
     triangle(x, y, x1Random, y1Random, size, size);
   }
 }
-
+//If any of the 3 keys are pressed, it will generate a shape with a random colour and opacity
 function keyPressed() {
     if (key == '1') state = 1;
     if (key == '2') state = 2;
