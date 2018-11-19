@@ -14,12 +14,12 @@ function draw() {
   ellipses(xPlusOne, yPlusOne);
 
   //Run the nested loop for x, and y
-  for (let y = 0; y < 5; y++) {
-    for (let x = 0; x < 5; x++) {
-      rects (Math.round(random(4)), Math.round(random(4)));
-    }
-  }
-}
+  //for (let y = 0; y < 5; y++) {
+    //for (let x = 0; x < 5; x++) {
+      //rects (Math.round(random(4)), Math.round(random(4)));
+    //}
+  //}
+//}
 
 function ellipses(x, y){
   var x = random(500);

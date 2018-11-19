@@ -1,3 +1,4 @@
+//Define Variables
 let sizeRandom = 50;
 let xRandom;
 let yRandom;
@@ -5,13 +6,14 @@ let x1Random;
 let y1random;
 let state;
 
+//Setting up Canvas
 function setup() {
   createCanvas(500,500);
   frameRate(5);
   noStroke();
   background(0);
 }
-
+//Setting the values of variables
 function draw() {
   sizeRandom = random(50, 300);
   xRandom = random(width);
@@ -20,7 +22,7 @@ function draw() {
   y1Random = random(height);
   customShape(xRandom, yRandom, sizeRandom);
 }
-
+//Conditions
 function customShape(x, y, size) {
 if (state == 1) {
   fill(random(255), random(255), random(255), random(255));
