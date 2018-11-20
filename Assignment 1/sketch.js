@@ -19,8 +19,8 @@ function setup() {
   // init with random values
   for (let i = 0; i < tileCountX; i++) {
     hueValues[i] = random(360);
-    saturationValues[i] = random(100);
-    brightnessValues[i] = random(100);
+    saturationValues[i] = random(255);
+    brightnessValues[i] = random(255);
   }
 }
 
@@ -48,8 +48,9 @@ function draw() {
       let posY = tileHeight * gridY;
       let index = counter % currentTileCountX;
 
-// Get the component color values in the index and creates tiles based on the position of the mouse
+// Gets the component color values in the index and makes different colored tiles using the random function
       fill(hueValues[index], saturationValues[index], brightnessValues[index]);
+//Creates tiles using rectangles based on the position of the mouse
       rect(posX, posY, tileWidth, tileHeight);
       counter++;
     }
@@ -57,7 +58,8 @@ function draw() {
 }
 //If specific key is pressed, different colours will appear based on the random values set
 function keyPressed() {
-
+//define variable - colors
+//colors is made up of the random colors combined using the HSB colour model
     let colors = [];
     for (let i = 0; i < hueValues.length; i++) {
       colors.push(color(hueValues[i], saturationValues[i], brightnessValues[i]));
