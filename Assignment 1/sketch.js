@@ -17,6 +17,7 @@ function setup() {
   strokeWeight(5);
 
   // init with random values
+  //variable i is set to 0 and increments by 1 each time using i++ for the amount of tilecountX which is 25
   for (let i = 0; i < tileCountX; i++) {
     hueValues[i] = random(360);
     saturationValues[i] = random(255);
