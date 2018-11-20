@@ -14,7 +14,7 @@ function draw() {
   var x4 = map(mouseY, 0, width, 255, 0);
 
 //Each rectangle is set to an RGB Value and 1 Cyan colour
-//The rectangle are also in a set position on the top left of the screen
+//The rectangles are also in a set position on the top left of the screen
   rect(0, 0, 250, 250);
 
   fill(0, 255, 0, x2);
