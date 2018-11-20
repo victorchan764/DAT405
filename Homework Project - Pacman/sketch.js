@@ -1,12 +1,12 @@
+//Setting up canvas
 function setup() {
 	createCanvas(200, 200);
 	background(220);
 }
 
 function draw() {
-
 	stroke(0, 0);
-
+	
 	//Pacman Outline 'All Black lines'
 	fill("black");
 	rect(60, 30, 10, 10);
