@@ -26,6 +26,8 @@ function setup() {
 }
 
 function draw() {
+  // Set the background to Black
+  background(0, 0, 0);
 
   // The mouse coordinates is limited to the canvas size
   let mX = constrain(mouseX, 0, width);
