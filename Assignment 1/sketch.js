@@ -57,7 +57,6 @@ function draw() {
     }
   }
 }
-//If specific key is pressed, different colours will appear based on the random values set
 function keyPressed() {
 //define variable - colors
 //colors is made up of the random colors combined using the HSB colour model
@@ -65,7 +64,7 @@ function keyPressed() {
     for (let i = 0; i < hueValues.length; i++) {
       colors.push(color(hueValues[i], saturationValues[i], brightnessValues[i]));
     }
-
+//If specific key is pressed, different colours will appear based on the random values set
   if (key == '1') {
     for (let i = 0; i < tileCountX; i++) {
       hueValues[i] = random(255);
