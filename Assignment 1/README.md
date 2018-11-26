@@ -9,9 +9,8 @@ starting on 1 tile. As you move the mouse down to the bottom left, the Y axis
 increases up to 10 squares generating 10 rows of individual squares, if you move
 the mouse to the top right, the X axis will increase up to 25 generating 25
 columns of squares. Finally, if you move the mouse from the top right to the
-bottom left there will be a total of 250 squares on the screen.
-
-You can also press the numbers between 1 & 6 to change to different HSB colours
+bottom right there will be a total of 250 squares on the screen. You can also
+press the numbers between 1 & 6 to change to random HSB colours
 
 I used the random() function to generate different colours based on the HSB
 (Hue, Saturation, Brightness) colour model.
