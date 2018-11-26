@@ -105,12 +105,4 @@ function keyPressed() {
       brightnessValues[i] = random(255);
     }
   }
-
-  if (key == '6') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
 }
