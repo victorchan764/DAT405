@@ -12,14 +12,14 @@ let brightnessValues = [];
 //Set canvas size and Color mode
 function setup() {
   createCanvas(594, 841);
-  colorMode(HSB, 360, 100, 100, 100);
+  colorMode(HSB, 255, 100, 100, 100);
   //Stroke weight for individual tiles
   strokeWeight(5);
 
   // init with random values
   //variable i is set to 0 and increments by 1 each time using i++ for the amount of tilecountX which is 25
   for (let i = 0; i < tileCountX; i++) {
-    hueValues[i] = random(360);
+    hueValues[i] = random(255);
     saturationValues[i] = random(255);
     brightnessValues[i] = random(255);
   }
@@ -68,7 +68,7 @@ function keyPressed() {
 
   if (key == '1') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(100);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
@@ -76,7 +76,7 @@ function keyPressed() {
 
   if (key == '2') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(150);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
@@ -84,7 +84,7 @@ function keyPressed() {
 
   if (key == '3') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(200);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
@@ -92,7 +92,7 @@ function keyPressed() {
 
   if (key == '4') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(250);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
@@ -100,7 +100,7 @@ function keyPressed() {
 
   if (key == '5') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(300);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
@@ -108,7 +108,7 @@ function keyPressed() {
 
   if (key == '6') {
     for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(360);
+      hueValues[i] = random(255);
       saturationValues[i] = random(255);
       brightnessValues[i] = random(255);
     }
