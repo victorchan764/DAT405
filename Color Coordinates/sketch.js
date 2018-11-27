@@ -26,5 +26,4 @@ function draw() {
 //Cyan Square
   fill(0, 255, 255, x4);
   rect(250, 250, 250, 250);
-
 }
