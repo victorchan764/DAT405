@@ -21,6 +21,7 @@ function draw() {
   yRandom = random(height);
   x1Random = random(width);
   y1Random = random(height);
+  //custom shape function creates a shape in a random position on the canvas 
   customShape(xRandom, yRandom, sizeRandom);
 }
 //Conditions
