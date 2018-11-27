@@ -1,7 +1,10 @@
+//Define a variable called size
 let size;
 
+//Setting up canvas
 function setup() {
   createCanvas(500,500);
+//Frame rate is set to 3fps
   frameRate(3);
   noStroke();
 }
