@@ -17,10 +17,10 @@ function draw() {
 //Red Square
   fill(255, 0, 0, x1);
   rect(0, 0, 250, 250);
-//Blue square
+//Green square
   fill(0, 255, 0, x2);
   rect(250, 0, 250, 250);
-//Green square
+//Blue square
   fill(0, 0, 255, x3);
   rect(0, 250, 250, 250);
 //Cyan Square
