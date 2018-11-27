@@ -11,11 +11,13 @@ function setup() {
 
 function draw() {
   sizeRandom = random(200);
+  //x and y random generates the circle on a random position of the canvas
   xRandom = random (width);
   yRandom = random (height);
+  //Call the function. Pass the arguments for position and size
   customShape(xRandom, yRandom, sizeRandom);
 }
-
+//Create a custom shape. Use input parameters for position and size
 function customShape(x, y, size){
   stroke(0);
   strokeWeight(1);
