@@ -16,33 +16,34 @@ function setup() {
 }
 //Setting the values of variables
 function draw() {
+  //Randomise the variables for the position and size
   sizeRandom = random(50, 300);
   xRandom = random(width);
   yRandom = random(height);
   x1Random = random(width);
   y1Random = random(height);
-  //custom shape function creates a shape in a random position on the canvas 
+  //call the function. Pass the arguments for position and size
   customShape(xRandom, yRandom, sizeRandom);
 }
 //Conditions
 function customShape(x, y, size) {
 if (state == 1) {
   fill(random(255), random(255), random(255), random(255));
-  //Generates random circles with random colours and size
+  //Generates random circles with random colours and sizes
   ellipse(x, y, size, size);
 }
   else if (state == 2) {
     fill(random(255), random(255), random(255), random(255));
-    //Generates random squares with random colours and size
+    //Generates random squares with random colours and sizes
     rect(x, y, size, size);
   }
   else if (state == 3) {
     fill(random(255), random(255), random(255), random(255));
-    //Generates random triangles with random colours and size
+    //Generates random triangles with random colours and sizes
     triangle(x, y, x1Random, y1Random, size, size);
   }
 }
-//If any of the 3 keys are pressed, it will generate a shape with a random colour and opacity
+//If any of the 3 keys are pressed, it will generate a shape with a random colour and size
 function keyPressed() {
     if (key == '1') state = 1;
     if (key == '2') state = 2;
