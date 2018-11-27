@@ -14,15 +14,16 @@ function draw() {
   var x4 = map(mouseY, 0, width, 255, 0);
 
 //Each rectangle is set to an RGB Value and 1 Cyan colour
-//The rectangles are also in a set position on the top left of the screen
+//Red Square
+  fill(255, 0, 0, x1);
   rect(0, 0, 250, 250);
-
+//Blue square
   fill(0, 255, 0, x2);
   rect(250, 0, 250, 250);
-
+//Green square
   fill(0, 0, 255, x3);
   rect(0, 250, 250, 250);
-
+//Cyan Square
   fill(0, 255, 255, x4);
   rect(250, 250, 250, 250);
 
