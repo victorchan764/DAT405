@@ -9,6 +9,7 @@ let state;
 //Setting up Canvas
 function setup() {
   createCanvas(500,500);
+//Frame rate is set to 5fps
   frameRate(5);
   noStroke();
   background(0);
@@ -26,14 +27,17 @@ function draw() {
 function customShape(x, y, size) {
 if (state == 1) {
   fill(random(255), random(255), random(255), random(255));
+  //Generates random circles with random colours and size
   ellipse(x, y, size, size);
 }
   else if (state == 2) {
     fill(random(255), random(255), random(255), random(255));
+    //Generates random squares with random colours and size
     rect(x, y, size, size);
   }
   else if (state == 3) {
     fill(random(255), random(255), random(255), random(255));
+    //Generates random triangles with random colours and size
     triangle(x, y, x1Random, y1Random, size, size);
   }
 }
