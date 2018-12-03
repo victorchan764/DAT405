@@ -8,6 +8,8 @@ let getLocation3 = "Shanghai";
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //This variable will store the JSON weather data
 let weather1, weather2, weather3;
+//let size1, size2, size3;
+
 
 //The preload function is executed before initializing the code in setup
 //Loads any related data or media files
