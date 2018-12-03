@@ -1,5 +1,5 @@
 //http://api.openweathermap.org
-
+"http://api.openweathermap.org/data/2.5/weather?q="+"Plymouth"+"&units=metric&appid="+"6b4a465ac9894c63172283b3f271c20c"
 //Use a text/string object to assign the city we would like to know the weather of
 let getLocation = "Plymouth";
 //The API key has to be given by the openweathermap.org website (for free / per account)
