@@ -8,7 +8,7 @@ let getLocation3 = "Shanghai";
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //This variable will store the JSON weather data
 let weather1, weather2, weather3;
-//let size1, size2, size3;
+let size1, size2, size3;
 
 
 //The preload function is executed before initializing the code in setup
@@ -62,10 +62,14 @@ function draw(){
     size1 = map(weather1.main.temp, -5, 40, 10, 100);
     fill(map(weather1.main.temp,0, 20, 0, 255), 0, 0);
     ellipse(100, 100, size1, size1)
+    fill(255);
+    text(getLocation1, 100, 100);
 
     size2 = map(weather2.main.temp, -5, 40, 10, 100);
     fill(map(weather2.main.temp,0, 20, 0, 255), 0, 0);
     ellipse(200, 200, size2, size2)
+    fill(255);
+    text(getLocation2, 200, 200);
 
     size3 = map(weather3.main.temp, -5, 40, 10, 100);
     fill(map(weather3.main.temp,0, 20, 0, 255), 0, 0);
