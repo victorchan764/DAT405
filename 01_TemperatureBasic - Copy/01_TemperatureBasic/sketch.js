@@ -23,9 +23,9 @@ function preload() {
 
   //The URL is sent to the loadJSON that returns the data to the weather variable
   weather = loadJSON(url);
-  weather1 = loadJSON(url);
-  weather2 = loadJSON(url);
-  weather2 = loadJSON(url);
+  weather1 = loadJSON(url1);
+  weather2 = loadJSON(url2);
+  weather2 = loadJSON(url3);
 }
 
 function setup() {
@@ -42,10 +42,10 @@ function setup() {
   background(160);
   textAlign(CENTER);
   textSize(18);
-  text("Currrent temperature in Plymouth" + weather.main.temp + "°C", width/2, height/2);
-  text("Currrent temperature in London" + weather1.main.temp + "°C", width/2, height/3);
-  text("Currrent Humidity in Athens" + weather2.main.humidity + "%", width/2, height/4);
-  text("Currrent Wind speed in Shanghai" + weather.wind.speed + "MPH", width/2, height/5);
+  text("Currrent temperature in Plymouth" + weather.main.temp + "°C", width/2, height/2+20);
+  text("Currrent temperature in London" + weather1.main.temp + "°C", width/2, height/2+40);
+  text("Currrent Humidity in Athens" + weather2.main.humidity + "%", width/2, height/2+60);
+  text("Currrent Wind speed in Shanghai" + weather.wind.speed + "MPH", width/2, height/2+80);
   noLoop();
 }
 
