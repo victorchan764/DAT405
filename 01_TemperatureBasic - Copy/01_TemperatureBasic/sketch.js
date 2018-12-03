@@ -30,13 +30,13 @@ function preload() {
 
 function setup() {
   console.log(weather); //Return all JSON data'
-  console.log()
-  //console.log("Location: " + getLocation) //Show the location we are searching
-  //console.log("Temperature: " + weather.main.temp + "°C"); //Show location's conditions (temperature)
-  //console.log("Temperature (min): " + weather.main.temp_min + "°C"); //Minimum temperature
-  //console.log("Temperature (max): " + weather.main.temp_max + "°C"); //Maximum temperature
-  //console.log("Humidity: " + weather.main.humidity); //Humidity
-  //console.log("Pressure: " + weather.main.pressure); //Pressure
+  //console.log()
+  console.log("Location: " + getLocation) //Show the location we are searching
+  console.log("Temperature: " + weather.main.temp + "°C"); //Show location's conditions (temperature)
+  console.log("Temperature (min): " + weather.main.temp_min + "°C"); //Minimum temperature
+  console.log("Temperature (max): " + weather.main.temp_max + "°C"); //Maximum temperature
+  console.log("Humidity: " + weather.main.humidity); //Humidity
+  console.log("Pressure: " + weather.main.pressure); //Pressure
 
   //Display temperature information on the screen
   createCanvas(400, 400);
