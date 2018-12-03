@@ -48,14 +48,28 @@ function setup() {
 }
 
 function draw(){
-  let tempLondon = weather1.main.temp
-    let tempAthens = weather2.main.temp
-      let tempShanghai = weather3.main.temp
+  //let tempLondon = weather1.main.temp
+    //let tempAthens = weather2.main.temp
+      //let tempShanghai = weather3.main.temp
 
-    ellipse(200, 200, tempLondon, tempLondon);
-    text("London:" + weather1.main.temp + "°C",200, 200);
-    ellipse(400, 400, tempAthens, tempAthens);
-    text("Athens:" + weather2.main.temp + "°C",400, 400);
-    ellipse(600, 600, tempShanghai, tempShanghai);
-    text("Shanghai:" + weather3.main.temp + "°C",600, 600);
+    //ellipse(200, 200, tempLondon, tempLondon);
+    //text("London:" + weather1.main.temp + "°C",200, 200);
+    //ellipse(400, 400, tempAthens, tempAthens);
+    //text("Athens:" + weather2.main.temp + "°C",400, 400);
+    //ellipse(600, 600, tempShanghai, tempShanghai);
+    //text("Shanghai:" + weather3.main.temp + "°C",600, 600);
+
+    size1 = map(weather1.main.temp, -5, 40, 10, 100);
+    fill(map(weather1.main.temp,0, 20, 0, 255), 0, 0);
+    ellipse(100, 100, size1, size1)
+
+    size2 = map(weather2.main.temp, -5, 40, 10, 100);
+    fill(map(weather2.main.temp,0, 20, 0, 255), 0, 0);
+    ellipse(200, 200, size2, size2)
+
+    size3 = map(weather3.main.temp, -5, 40, 10, 100);
+    fill(map(weather3.main.temp,0, 20, 0, 255), 0, 0);
+    ellipse(300, 300, size3, size3);
+    fill(255);
+    text(getLocation3, 300, 300);
   }
