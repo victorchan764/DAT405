@@ -30,7 +30,6 @@ function preload() {
 
 function setup() {
   console.log(weather); //Return all JSON data'
-  //console.log()
   console.log("Location: " + getLocation) //Show the location we are searching
   console.log("Temperature: " + weather.main.temp + "°C"); //Show location's conditions (temperature)
   console.log("Temperature (min): " + weather.main.temp_min + "°C"); //Minimum temperature
