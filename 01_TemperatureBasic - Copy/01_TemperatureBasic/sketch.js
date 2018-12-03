@@ -63,17 +63,17 @@ function draw(){
     fill(map(weather1.main.temp,0, 20, 0, 255), 0, 0);
     ellipse(100, 100, size1, size1)
     fill(255);
-    text(getLocation1, 100, 100);
+    text(getLocation1 + weather1.main.temp + "°C", 100, 100);
 
     size2 = map(weather2.main.temp, -5, 40, 10, 100);
     fill(map(weather2.main.temp,0, 20, 0, 255), 0, 0);
     ellipse(200, 200, size2, size2)
     fill(255);
-    text(getLocation2, 200, 200);
+    text(getLocation2 + weather2.main.temp + "°C", 200, 200);
 
     size3 = map(weather3.main.temp, -5, 40, 10, 100);
     fill(map(weather3.main.temp,0, 20, 0, 255), 0, 0);
     ellipse(300, 300, size3, size3);
     fill(255);
-    text(getLocation3, 300, 300);
+    text(getLocation3 + weather3.main.temp + "°C", 300, 300);
   }
