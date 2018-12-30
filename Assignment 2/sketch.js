@@ -136,16 +136,24 @@ function windowResized() {
 }
 
 function weatherVar(){
+  //City Name
   cityName = weather.name;
+  //Country Code
   country = weather.sys.country;
+  //Weather ID
   weatherId = weather.weather[0].id;
   weatherDescription = weather.weather[0].description;
+  //Temperature
   temp = round(weather.main.temp);
+  //
   epochUpdate = weather.dt;
+  //Type of clouds
   Cloudiness = weather.clouds.all;
+  //Wind Speed
   windSpeed = weather.wind.speed;
   windRatio = windSpeed / 200;
   windDeg = weather.wind.deg;
+  //Visibility & Humidity
   visibility = map(weather.visibility, 0, 10000, 0, 255);
   humidity = weather.main.humidity;
 }
