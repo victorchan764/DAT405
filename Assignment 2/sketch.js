@@ -77,7 +77,7 @@ function draw() {
 
   push();
   fill(255);
-  textFont("Lato");
+  textFont("Arial");
   textAlign(LEFT);
   textSize(48);
   text(temp + "°", 20, 60);
