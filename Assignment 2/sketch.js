@@ -1,7 +1,7 @@
 let city = "Yeovil";
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 
-var weather,
+let weather,
 cityName,
   country,
   weatherId,
@@ -13,21 +13,20 @@ cityName,
   temp,
   visibility,
   windRatio;
-var r = 0;
+let r = 0;
 
-var epochUpdate, update, updateText;
-var xDir, yDir, unit, countX, countY, size;
-var c;
+let epochUpdate, update, updateText;
+let xDir, yDir, unit, countX, countY, size;
+let c;
 
 
 function preload() {
-  var url =
-    "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
+  let url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
   weather = loadJSON(url);
 }
 
 function setup() {
-  var cnv = createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent("homeAnim");
   background(0);
   frameRate(30);
@@ -66,8 +65,8 @@ function draw() {
   angleMode(RADIANS);
   rectMode(CENTER);
   ellipseMode(CENTER);
-  for (var x = 0; x < countX + 1; x++) {
-    for (var y = 0; y < countY + 1; y++) {
+  for (let x = 0; x < countX + 1; x++) {
+    for (let y = 0; y < countY + 1; y++) {
       push();
       fixe(x,y);
       animate(x, y);
@@ -96,11 +95,11 @@ function draw() {
   text(updateText, width - 20, height - 30);
   pop();
 
-  var ep = 5;
-  cadre(0,0,width,ep);
-  cadre(0,0,ep,height);
-  cadre(width-ep, 0, ep, height);
-  cadre(0, height-ep, width, ep);
+  let ep = 5;
+  frame(0,0,width,ep);
+  frame(0,0,ep,height);
+  frame(width-ep, 0, ep, height);
+  frame(0, height-ep, width, ep);
 }
 
 function fixe(x,y) {
@@ -121,7 +120,7 @@ function animate(x, y) {
   rotate(speed + x * xDir + y * yDir);
 }
 
-function cadre(posx, posy, widthSize, heightSize){
+function frame(posx, posy, widthSize, heightSize){
   push();
   fill(0);
   noStroke();
