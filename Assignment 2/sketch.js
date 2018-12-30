@@ -68,7 +68,7 @@ function draw() {
   for (let x = 0; x < countX + 1; x++) {
     for (let y = 0; y < countY + 1; y++) {
       push();
-      fixe(x,y);
+      fixed(x,y);
       animate(x, y);
       sketch(x,y);
       pop();
@@ -96,13 +96,13 @@ function draw() {
   pop();
 
   let ep = 5;
-  cadre(0,0,width,ep);
-  cadre(0,0,ep,height);
-  cadre(width-ep, 0, ep, height);
-  cadre(0, height-ep, width, ep);
+  frame(0,0,width,ep);
+  frame(0,0,ep,height);
+  frame(width-ep, 0, ep, height);
+  frame(0, height-ep, width, ep);
 }
 
-function fixe(x,y) {
+function fixed(x,y) {
   strokeWeight(1);
   stroke(255,255,255,30);
   noFill();
@@ -120,7 +120,7 @@ function animate(x, y) {
   rotate(speed + x * xDir + y * yDir);
 }
 
-function cadre(posx, posy, widthSize, heightSize){
+function frame(posx, posy, widthSize, heightSize){
   push();
   fill(0);
   noStroke();
