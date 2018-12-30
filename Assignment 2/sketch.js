@@ -9,7 +9,7 @@ let weather,
   Cloudiness,
   humidity,
   windSpeed,
-  windDeg,
+  windDegrees,
   temp,
   visibility,
   windRatio;
