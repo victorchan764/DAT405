@@ -26,8 +26,7 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent("homeAnim");
+  createCanvas(1280, 720);
   background(0);
   frameRate(30);
 
