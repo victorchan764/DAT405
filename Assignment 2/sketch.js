@@ -1,3 +1,5 @@
+let getLocation = "Yeovil";
+
 var weather,
 cityName,
   country,
@@ -10,7 +12,7 @@ cityName,
   temp,
   visibility,
   windRatio;
-var ville = "Nantes";
+var city = "Yeovil";
 var r = 0;
 
 var epochUpdate, update, updateText;
@@ -20,7 +22,7 @@ var c;
 
 function preload() {
   var url =
-    "https://api.openweathermap.org/data/2.5/weather?q="+ville+"&units=metric&APPID=8bc33b55474e0525d2c28707ca934965&lang=fr";
+    "http://api.openweathermap.org/data/2.5/weather?q="+getLocation+"&units=metric&appid="+apiKey;
   weather = loadJSON(url);
 }
 
