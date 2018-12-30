@@ -26,8 +26,7 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
-  cnv.parent("homeAnim");
+  createCanvas(1280, 720);
   background(0);
   frameRate(30);
 
@@ -128,7 +127,7 @@ function frame(posx, posy, widthSize, heightSize){
   pop();
 }
 
-
+//
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   countX = round(windowWidth / unit);
