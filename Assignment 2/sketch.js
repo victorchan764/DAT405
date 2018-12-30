@@ -67,7 +67,7 @@ function draw() {
   for (let x = 0; x < countX + 1; x++) {
     for (let y = 0; y < countY + 1; y++) {
       push();
-      fixe(x,y);
+      fixed(x,y);
       animate(x, y);
       sketch(x,y);
       pop();
@@ -101,7 +101,7 @@ function draw() {
   frame(0, height-ep, width, ep);
 }
 
-function fixe(x,y) {
+function fixed(x,y) {
   strokeWeight(1);
   stroke(255,255,255,30);
   noFill();
@@ -129,9 +129,9 @@ function frame(posx, posy, widthSize, heightSize){
 
 //
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  countX = round(windowWidth / unit);
-  countY = round(windowHeight / unit);
+  resizeCanvas(1280, 720);
+  countX = round(1280 / unit);
+  countY = round(720/ unit);
 }
 
 function weatherVar(){
