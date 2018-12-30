@@ -32,7 +32,7 @@ function setup() {
   background(160);
   textAlign(CENTER);
   textSize(18);
-  text("Current Temperature in " + getLocation  is + weather.main.temp + "°C", width/2, height/2);
+  text("Current Temperature in Yeovil is " + weather.main.temp + "°C", width/2, height/2);
   noLoop();
 }
 
