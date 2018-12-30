@@ -1,31 +1,32 @@
-var weather,
+let apikey =  "6b4a465ac9894c63172283b3f271c20c"
+let weather,
   cityName,
   country,
   weatherId,
   weatherDescription,
-  Cloudiness,
+  cloudiness,
   humidity,
   windSpeed,
   windDeg,
   temp,
   visibility,
   windRatio;
-var ville = "Yeovil";
-var r = 0;
 
-var epochUpdate, update, updateText;
-var xDir, yDir, unit, countX, countY, size;
-var c;
+let city = "Yeovil";
+let r = 0;
+
+let epochUpdate, update, updateText;
+let xDir, yDir, unit, countX, countY, size;
+let c;
 
 
 function preload() {
-  var url =
-    "https://api.openweathermap.org/data/2.5/weather?q="+ville+"&units=metric&APPID=8bc33b55474e0525d2c28707ca934965&lang=fr";
+  let url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid= "+apikey;
   weather = loadJSON(url);
 }
 
 function setup() {
-  var cnv = createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent("homeAnim");
   background(0);
   frameRate(30);
@@ -64,8 +65,8 @@ function draw() {
   angleMode(RADIANS);
   rectMode(CENTER);
   ellipseMode(CENTER);
-  for (var x = 0; x < countX + 1; x++) {
-    for (var y = 0; y < countY + 1; y++) {
+  for (let x = 0; x < countX + 1; x++) {
+    for (let y = 0; y < countY + 1; y++) {
       push();
       fixe(x,y);
       animate(x, y);
@@ -94,7 +95,7 @@ function draw() {
   text(updateText, width - 20, height - 30);
   pop();
 
-  var ep = 5;
+  let ep = 5;
   cadre(0,0,width,ep);
   cadre(0,0,ep,height);
   cadre(width-ep, 0, ep, height);
@@ -141,7 +142,7 @@ function weatherVar(){
   weatherDescription = weather.weather[0].description;
   temp = round(weather.main.temp);
   epochUpdate = weather.dt;
-  Cloudiness = weather.clouds.all;
+  cloudiness = weather.clouds.all;
   windSpeed = weather.wind.speed;
   windRatio = windSpeed / 200;
   windDeg = weather.wind.deg;
