@@ -1,107 +1,150 @@
-//Define Variables
-//tileCountX is the number of tiles on the X axis
-//tileCountY is the number of tiles on the Y axis
-let tileCountX = 25;
-let tileCountY = 10;
+var weather,
+  cityName,
+  country,
+  weatherId,
+  weatherDescription,
+  Cloudiness,
+  humidity,
+  windSpeed,
+  windDeg,
+  temp,
+  visibility,
+  windRatio;
+var ville = "Yeovil";
+var r = 0;
 
-//Setting the Arrays
-let hueValues = [];
-let saturationValues = [];
-let brightnessValues = [];
+var epochUpdate, update, updateText;
+var xDir, yDir, unit, countX, countY, size;
+var c;
 
-//Set canvas size and Color mode
+
+function preload() {
+  var url =
+    "https://api.openweathermap.org/data/2.5/weather?q="+ville+"&units=metric&APPID=8bc33b55474e0525d2c28707ca934965&lang=fr";
+  weather = loadJSON(url);
+}
+
 function setup() {
-  createCanvas(594, 841);
-  colorMode(HSB, 255, 100, 100, 100);
-  //Stroke weight for individual tiles
-  strokeWeight(5);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.parent("homeAnim");
+  background(0);
+  frameRate(30);
 
-  // init with random values
-  //variable i is set to 0 and increments by 1 each time using i++ for the amount of tilecountX which is 25
-  for (let i = 0; i < tileCountX; i++) {
-    hueValues[i] = random(255);
-    saturationValues[i] = random(255);
-    brightnessValues[i] = random(255);
-  }
+  weatherVar();
+
+  /* Orientation vent */
+  angleMode(DEGREES);
+  if (windDeg === undefined || !windDeg) windDeg = 0;
+  xDir = sin(windDeg);
+  yDir = -cos(windDeg);
+
+  unit = round(map(Cloudiness, 0, 100, 80, 20));
+  countX = round(windowWidth / unit);
+  countY = round(windowHeight / unit);
+  size = round(windowWidth / countX);
+
+  /*Humidity*/
+  alpha = visibility;
+  c = color(0, 0, 0, alpha);
+
+  /* Convert Epoch to date */
+  update = new Date(epochUpdate * 1000);
+  updateText = update.getHours() + ":" + update.getMinutes();
+
 }
 
 function draw() {
-  // Set the background to Black
-  background(0, 0, 0);
+  fill(c);
+  rect(width/2, height/2, width, height);
 
-  // The mouse coordinates is limited to the canvas size
-  let mX = constrain(mouseX, 0, width);
-  let mY = constrain(mouseY, 0, height);
+  r = r + windRatio;
+  if (r > 2) r = 0;
+  speed = round(r * PI * 100) / 100;
 
-  // tile counter is set to 0 at the start
-  let counter = 0;
-
-  // The movement of the Mouse is mapped to grid resolution
-  let currentTileCountX = int(map(mX, 0, width, 1, tileCountX));
-  let currentTileCountY = int(map(mY, 0, height, 1, tileCountY));
-  let tileWidth = width / currentTileCountX;
-  let tileHeight = height / currentTileCountY;
-
-  for (let gridY = 0; gridY < tileCountY; gridY++) {
-    for (let gridX = 0; gridX < tileCountX; gridX++) {
-      //Wherever the mouse is positioned, the tile sizes increase or decrease
-      let posX = tileWidth * gridX;
-      let posY = tileHeight * gridY;
-      let index = counter % currentTileCountX;
-
-// Gets the component color values in the index and makes different colored tiles using the random function
-      fill(hueValues[index], saturationValues[index], brightnessValues[index]);
-//Creates tiles using rectangles based on the position of the mouse
-      rect(posX, posY, tileWidth, tileHeight);
-      counter++;
+  angleMode(RADIANS);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+  for (var x = 0; x < countX + 1; x++) {
+    for (var y = 0; y < countY + 1; y++) {
+      push();
+      fixe(x,y);
+      animate(x, y);
+      sketch(x,y);
+      pop();
     }
   }
+
+  push();
+  fill(255);
+  textFont("Lato");
+  textAlign(LEFT);
+  textSize(48);
+  text(temp + "°", 20, 60);
+  textSize(14);
+  fill(127);
+  //text(deviceOrientation, 20, 30);
+  text(cityName + " / " + country + " / "+temp + "°", 20, height - 30);
+  textAlign(CENTER);
+  text(
+    weatherDescription + " / " + weatherId + " / " + windSpeed + "m/s",
+    width / 2,
+    height - 30
+  );
+  textAlign(RIGHT);
+  text(updateText, width - 20, height - 30);
+  pop();
+
+  var ep = 5;
+  cadre(0,0,width,ep);
+  cadre(0,0,ep,height);
+  cadre(width-ep, 0, ep, height);
+  cadre(0, height-ep, width, ep);
 }
-function keyPressed() {
-//define variable - colors
-//colors is made up of the random colors combined using the HSB colour model
-    let colors = [];
-    for (let i = 0; i < hueValues.length; i++) {
-      colors.push(color(hueValues[i], saturationValues[i], brightnessValues[i]));
-    }
-//If specific key is pressed, different colours will appear based on the random values set
-  if (key == '1') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
 
-  if (key == '2') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
+function fixe(x,y) {
+  strokeWeight(1);
+  stroke(255,255,255,30);
+  noFill();
+  //rect(x*size,y*size,size, size);
+  //ellipse(x*size,y*size,size, size);
+}
 
-  if (key == '3') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
+function sketch(x,y) {
+  strokeWeight(3);
+  stroke(255);
+  point(0, size/2);
+}
+function animate(x, y) {
+  translate(x * size, y * size);
+  rotate(speed + x * xDir + y * yDir);
+}
 
-  if (key == '4') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
+function cadre(posx, posy, widthSize, heightSize){
+  push();
+  fill(0);
+  noStroke();
+  rect(posx,posy,widthSize,heightSize);
+  pop();
+}
 
-  if (key == '5') {
-    for (let i = 0; i < tileCountX; i++) {
-      hueValues[i] = random(255);
-      saturationValues[i] = random(255);
-      brightnessValues[i] = random(255);
-    }
-  }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  countX = round(windowWidth / unit);
+  countY = round(windowHeight / unit);
+}
+
+function weatherVar(){
+  cityName = weather.name;
+  country = weather.sys.country;
+  weatherId = weather.weather[0].id;
+  weatherDescription = weather.weather[0].description;
+  temp = round(weather.main.temp);
+  epochUpdate = weather.dt;
+  Cloudiness = weather.clouds.all;
+  windSpeed = weather.wind.speed;
+  windRatio = windSpeed / 200;
+  windDeg = weather.wind.deg;
+  visibility = map(weather.visibility, 0, 10000, 0, 255);
+  humidity = weather.main.humidity;
 }
