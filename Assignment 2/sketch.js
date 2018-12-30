@@ -35,7 +35,7 @@ function setup() {
 
   /* Orientation vent */
   angleMode(DEGREES);
-  if (windDeg === undefined || !windDeg) windDeg = 0;
+  if (windDegrees === undefined || !windDegrees) windDegrees = 0;
   xDir = sin(windDegrees);
   yDir = -cos(windDegrees);
 
