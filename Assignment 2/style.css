@@ -1,12 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
-body{
+html, body{
   //cursor:none;
+  height: 100%;
   margin:0;
   padding:0;
   background:#000;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight:lighter;
   height:1280vh;
   width:720vw;
   position:fixed;
+  
+  display: flex;
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+  /* This centers our sketch vertically. */
+  align-items: center;
 }
