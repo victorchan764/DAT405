@@ -39,7 +39,7 @@ function setup() {
   xDir = sin(windDeg);
   yDir = -cos(windDeg);
 
-  unit = round(map(Cloudiness, 0, 100, 80, 20));
+  unit = round(map(cloudiness, 0, 100, 80, 20));
   countX = round(windowWidth / unit);
   countY = round(windowHeight / unit);
   size = round(windowWidth / countX);
@@ -127,7 +127,6 @@ function cadre(posx, posy, widthSize, heightSize){
   rect(posx,posy,widthSize,heightSize);
   pop();
 }
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
