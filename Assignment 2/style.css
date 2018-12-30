@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
 html, body{
   //cursor:none;
-  height: 100%;
   margin:0;
   padding:0;
   background:#000;
@@ -11,9 +10,4 @@ html, body{
   width:720vw;
   position:fixed;
 
-  display: flex;
-  /* This centers our sketch horizontally. */
-  justify-content: center;
-  /* This centers our sketch vertically. */
-  align-items: center;
 }
