@@ -2,7 +2,7 @@ let city = "Yeovil";
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 
 let weather,
-cityName,
+  cityName,
   country,
   weatherId,
   weatherDescription,
@@ -26,8 +26,8 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(1280, 720);
-  cnv.parent("homeAnim");
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("homeAnim");
   background(0);
   frameRate(30);
 
@@ -36,8 +36,8 @@ function setup() {
   /* Orientation vent */
   angleMode(DEGREES);
   if (windDeg === undefined || !windDeg) windDeg = 0;
-  xDir = sin(windDeg);
-  yDir = -cos(windDeg);
+  xDir = sin(windDegrees);
+  yDir = -cos(windDegrees);
 
   unit = round(map(Cloudiness, 0, 100, 80, 20));
   countX = round(windowWidth / unit);
