@@ -1,4 +1,5 @@
-let getLocation = "Yeovil";
+let city = "Yeovil";
+let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 
 var weather,
 cityName,
@@ -12,7 +13,6 @@ cityName,
   temp,
   visibility,
   windRatio;
-var city = "Yeovil";
 var r = 0;
 
 var epochUpdate, update, updateText;
@@ -22,7 +22,7 @@ var c;
 
 function preload() {
   var url =
-    "http://api.openweathermap.org/data/2.5/weather?q="+getLocation+"&units=metric&appid="+apiKey;
+    "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
   weather = loadJSON(url);
 }
 
