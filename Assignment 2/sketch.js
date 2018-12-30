@@ -26,7 +26,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1280, 720);
+  let cnv = createCanvas(1280, 720);
+  cnv.parent("homeAnim");
   background(0);
   frameRate(30);
 
@@ -76,7 +77,7 @@ function draw() {
 
   push();
   fill(255);
-  textFont("Roboto");
+  textFont("Lato");
   textAlign(LEFT);
   textSize(48);
   text(temp + "°", 20, 60);

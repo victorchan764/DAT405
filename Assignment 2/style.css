@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 body{
   //cursor:none;
   margin:0;
@@ -6,7 +6,11 @@ body{
   background:#000;
   font-family: 'Roboto', sans-serif;
   font-weight:lighter;
-  height:1280vh;
-  width:720vw;
+  height:100vh;
+  width:100vw;
   position:fixed;
+}
+#homeAnim{
+  height:100vh;
+  width:100vw;
 }
