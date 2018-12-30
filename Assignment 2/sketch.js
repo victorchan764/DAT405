@@ -11,7 +11,8 @@ let weather,
   windSpeed,
   windDegrees,
   temp,
-  visibility;
+  visibility,
+  windRatio;
 let r = 0;
 
 let epochUpdate, update, updateText;
@@ -147,8 +148,9 @@ function weatherVar(){
   epochUpdate = weather.dt;
   //Type of clouds
   Cloudiness = weather.clouds.all;
-  //Wind Info
+  //Wind Speed
   windSpeed = weather.wind.speed;
+  windRatio = windSpeed / 200;
   windDeg = weather.wind.deg;
   //Visibility & Humidity
   visibility = map(weather.visibility, 0, 10000, 0, 255);
