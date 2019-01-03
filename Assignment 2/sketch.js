@@ -1,6 +1,8 @@
+//Specify Town or city
 let city = "Yeovil";
+//The API key is given by the openweathermap.org website
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
-
+//Declare and call variables for API response
 let weather,
   cityName,
   country,
@@ -13,6 +15,7 @@ let weather,
   temp,
   visibility,
   windRatio;
+  
 let r = 0;
 
 let epochUpdate, update, updateText;
