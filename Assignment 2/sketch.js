@@ -133,13 +133,13 @@ function frame(posx, posy, widthSize, heightSize){
   pop();
 }
 
-//
+//Size of the canvas
 function windowResized() {
   resizeCanvas(1280, 720);
   countX = round(1280 / unit);
   countY = round(720/ unit);
 }
-//Using the weather variable,
+//Using the weather variable, we can load the data from the JSON file and use that set of data
 function weatherVar(){
   //City Name
   cityName = weather.name;
