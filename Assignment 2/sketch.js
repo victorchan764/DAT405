@@ -15,7 +15,7 @@ let weather,
   temp,
   visibility,
   windRatio;
-  
+
 let r = 0;
 
 let epochUpdate, update, updateText;
@@ -24,7 +24,9 @@ let c;
 
 
 function preload() {
+  //The text/string object is formatted with the location we want to use, and our own API key
   let url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
+  //The URL is sent to the loadJSON that returns the data to the weather variable
   weather = loadJSON(url);
 }
 
@@ -46,7 +48,7 @@ function setup() {
   countY = round(windowHeight / unit);
   size = round(windowWidth / countX);
 
-  /*Humidity*/
+  //Display Humidity and visibility
   alpha = visibility;
   c = color(0, 0, 0, alpha);
 
@@ -77,6 +79,7 @@ function draw() {
     }
   }
 
+//Position, font type and display of Text
   push();
   fill(255);
   textFont("Lato");
@@ -136,7 +139,7 @@ function windowResized() {
   countX = round(1280 / unit);
   countY = round(720/ unit);
 }
-
+//Using the weather variable,
 function weatherVar(){
   //City Name
   cityName = weather.name;
