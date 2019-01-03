@@ -150,7 +150,7 @@ function weatherVar(){
   weatherDescription = weather.weather[0].description;
   //Temperature
   temp = round(weather.main.temp);
-  //
+  //Get data based on last weather update
   epochUpdate = weather.dt;
   //Type of clouds
   Cloudiness = weather.clouds.all;
