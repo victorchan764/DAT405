@@ -157,7 +157,7 @@ function weatherVar(){
   //Wind Speed
   windSpeed = weather.wind.speed;
   windRatio = windSpeed / 200;
-  windDeg = weather.wind.deg;
+  windDegrees = weather.wind.deg;
   //Visibility & Humidity
   visibility = map(weather.visibility, 0, 10000, 0, 255);
   humidity = weather.main.humidity;
