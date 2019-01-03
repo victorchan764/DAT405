@@ -40,8 +40,8 @@ function setup() {
   /* Orientation vent */
   angleMode(DEGREES);
   if (windDegrees === undefined || !windDegrees) windDegrees = 0;
-  xDir = sin(windDegrees);
-  yDir = -cos(windDegrees);
+  xDirection = sin(windDegrees);
+  yDirection = -cos(windDegrees);
 
   unit = round(map(Cloudiness, 0, 100, 80, 20));
   countX = round(windowWidth / unit);
@@ -122,7 +122,7 @@ function sketch(x,y) {
 }
 function animate(x, y) {
   translate(x * size, y * size);
-  rotate(speed + x * xDir + y * yDir);
+  rotate(speed + x * xDirection + y * yDirection);
 }
 
 function frame(posx, posy, widthSize, heightSize){
