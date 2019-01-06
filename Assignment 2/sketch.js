@@ -127,7 +127,7 @@ function draw() {
 }
 
 function fixed(x,y) {
-  strokeWeight(10);
+  strokeWeight(0);
   stroke(255,255,255,30);
   noFill();
 }
