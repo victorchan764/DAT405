@@ -44,7 +44,7 @@ function centerCanvas() {
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
 }
-
+//Extracts data from weather variable
   weatherVar();
 
   // Orientation
