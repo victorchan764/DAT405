@@ -18,6 +18,7 @@ let weather,
 
 let r = 0;
 
+//This variable
 let epochUpdate, update, updateText;
 let xDir, yDir, unit, countX, countY, size;
 let c;
@@ -52,7 +53,7 @@ function setup() {
   alpha = visibility;
   c = color(0, 0, 0, alpha);
 
-  /* Convert Epoch to date */
+  // Converts the Epoch timestamp into the current date */
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
 
