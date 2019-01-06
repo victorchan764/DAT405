@@ -86,13 +86,16 @@ function draw() {
   textFont("Lato");
   textAlign(LEFT);
   textSize(48);
+  //Temperature is displayed in the top left of the canvas
   text(temp + "°", 20, 60);
   textSize(14);
   fill(127);
   //text(deviceOrientation, 20, 30);
+  //the location is displayed at the bottom left of the canvas
   text(cityName + " / " + country + " / "+temp + "°", 20, height - 30);
   textAlign(CENTER);
   text(
+  //The weather information is displayed in the bottom middle of the canvas
     weatherDescription + " / " + weatherId + " / " + windSpeed + "m/s",
     width / 2,
     height - 30
@@ -136,12 +139,6 @@ function frame(posx, posy, widthSize, heightSize){
   pop();
 }
 
-//Size of the canvas
-function windowResized() {
-  resizeCanvas(1280, 720);
-  countX = round(1280 / unit);
-  countY = round(720/ unit);
-}
 //Using the weather variable, we can load the data from the JSON file and use that set of data
 function weatherVar(){
   //City Name
