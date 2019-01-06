@@ -140,7 +140,7 @@ function animate(x, y) {
 
 function frame(posx, posy, widthSize, heightSize){
   push();
-  fill(255);
+  fill(0);
   noStroke();
   rect(posx,posy,widthSize,heightSize);
   pop();
