@@ -125,8 +125,6 @@ function fixed(x,y) {
   strokeWeight(1);
   stroke(255,255,255,30);
   noFill();
-  //rect(x*size,y*size,size, size);
-  //ellipse(x*size,y*size,size, size);
 }
 
 function sketch(x,y) {
@@ -142,7 +140,7 @@ function animate(x, y) {
 
 function frame(posx, posy, widthSize, heightSize){
   push();
-  fill(0);
+  fill(255);
   noStroke();
   rect(posx,posy,widthSize,heightSize);
   pop();
