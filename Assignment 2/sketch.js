@@ -18,7 +18,7 @@ let weather,
 
 let r = 0;
 
-//This variable
+//This variable is for updating the unix timestamp into an Epoch date
 let epochUpdate, update, updateText;
 let xDir, yDir, unit, countX, countY, size;
 let c;
@@ -62,7 +62,7 @@ function centerCanvas() {
   alpha = visibility;
   c = color(0, 0, 0, alpha);
 
-  // Converts the Epoch timestamp into the most recent time the weather in the specifc location has last been updated */
+  // Converts the unix timestamp into the most recent time the weather in the specifc location has last been updated */
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
 
