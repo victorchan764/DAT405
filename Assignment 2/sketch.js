@@ -44,10 +44,10 @@ function centerCanvas() {
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
 }
-//Extracts data from weather variable
+  //Extracts data from weather variable
   weatherVar();
 
-  // Orientation
+  // Default anglemode is RADIANS but is now set to DEGREES
   angleMode(DEGREES);
   if (windDegrees === undefined || !windDegrees) windDegrees = 0;
   xDirection = sin(windDegrees);
