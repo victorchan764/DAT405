@@ -45,9 +45,6 @@ function centerCanvas() {
   cnv.position(x, y);
 }
 
-function windowResized() {
-  centerCanvas();
-}
   weatherVar();
 
   /* Orientation vent */
