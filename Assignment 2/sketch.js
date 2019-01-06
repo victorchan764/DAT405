@@ -54,6 +54,7 @@ function centerCanvas() {
 
   // Default anglemode is RADIANS but is now set to DEGREES
   angleMode(DEGREES);
+  //Setting the linear motion of the circles based on the weather.wind.deg function
   if (windDegrees === undefined || !windDegrees) windDegrees = 0;
   xDirection = sin(windDegrees);
   yDirection = -cos(windDegrees);
@@ -86,10 +87,12 @@ function draw() {
   ellipseMode(CENTER);
   for (let x = 0; x < countX + 1; x++) {
     for (let y = 0; y < countY + 1; y++) {
+  //saves all current drawing styles and transformations
       push();
       fixed(x,y);
       animate(x, y);
       sketch(x,y);
+  //restores settings
       pop();
     }
   }
