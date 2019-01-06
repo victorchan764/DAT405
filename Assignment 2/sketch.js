@@ -101,6 +101,7 @@ function draw() {
   text(updateText, width - 20, height - 30);
   pop();
 
+//Frame starts in top left corner
   let ep = 5;
   frame(0,0,width,ep);
   frame(0,0,ep,height);
@@ -121,6 +122,7 @@ function sketch(x,y) {
   stroke(255);
   point(0, size/2);
 }
+//Animates the motion of the circles in a pattern based on the temperature and cloudiness of the location
 function animate(x, y) {
   translate(x * size, y * size);
   rotate(speed + x * xDirection + y * yDirection);
