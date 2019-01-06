@@ -32,10 +32,22 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1280, 720);
   background(0);
   frameRate(30);
+  cnv = createCanvas(1280, 720);
+  centerCanvas();
 
+  var cnv;
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function windowResized() {
+  centerCanvas();
+}
   weatherVar();
 
   /* Orientation vent */
