@@ -1,6 +1,6 @@
 //Specify Town or city; Must be written correctly
 let city = "Yeovil";
-//The API key is given by the openweathermap.org website (using the one provided to us)
+//The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
 let weather,
@@ -20,18 +20,19 @@ let r = 0;
 
 //This variable is for updating the unix timestamp into an Epoch date
 let epochUpdate, update, updateText;
-//These variables dictate the size of the circles and the directions of where they move around
+//These variables dictate the size of the circles and the direction of where they move around
 let xDir, yDir, unit, countX, countY, size;
 let c;
 
 
 function preload() {
-  //The text/string object is formatted with the location we want to use, and our own API key
+  //The text/string object is formatted with the location we want to use, and our unique API key
   let url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
   //The URL is sent to the loadJSON that returns the data to the weather variable
   weather = loadJSON(url);
 }
 
+//Setting up canvas
 function setup() {
   background(0);
   frameRate(30);
@@ -41,12 +42,14 @@ function setup() {
   //Define canvas variable so that canvas can be centered
   var cnv;
 
+//Function for centering canvas
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
 }
-  //Extracts data from weather variable
+
+  //Extract data from weather variable
   weatherVar();
 
   // Default anglemode is RADIANS but is now set to DEGREES
@@ -91,7 +94,7 @@ function draw() {
     }
   }
 
-  //Position, font type and display of Text
+  //Colour of font, font type and position of Text
   push();
   fill(255);
   textFont("Lato");
