@@ -103,7 +103,7 @@ function draw() {
   //Temperature is displayed in the top left of the canvas
   text(temp + "°", 20, 60);
   textSize(14);
-  fill(127);
+  fill(125);
   //text(deviceOrientation, 20, 30);
   //the location is displayed at the bottom left of the canvas
   text(cityName + " / " + country + " / "+temp + "°", 20, height - 30);
