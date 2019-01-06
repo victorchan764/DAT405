@@ -20,6 +20,7 @@ let r = 0;
 
 //This variable is for updating the unix timestamp into an Epoch date
 let epochUpdate, update, updateText;
+//These variables dictate the size of the circles and the directions of where they move around
 let xDir, yDir, unit, countX, countY, size;
 let c;
 
@@ -37,6 +38,7 @@ function setup() {
   cnv = createCanvas(1280, 720);
   centerCanvas();
 
+  //Define canvas variable so that canvas can be centered
   var cnv;
 
 function centerCanvas() {
@@ -89,7 +91,7 @@ function draw() {
     }
   }
 
-//Position, font type and display of Text
+  //Position, font type and display of Text
   push();
   fill(255);
   textFont("Lato");
@@ -122,11 +124,12 @@ function draw() {
 }
 
 function fixed(x,y) {
-  strokeWeight(1);
+  strokeWeight(10);
   stroke(255,255,255,30);
   noFill();
 }
 
+//Determines the size of the circles
 function sketch(x,y) {
   strokeWeight(3);
   stroke(255);
@@ -138,6 +141,7 @@ function animate(x, y) {
   rotate(speed + x * xDirection + y * yDirection);
 }
 
+//Size and position of the canvas frame
 function frame(posx, posy, widthSize, heightSize){
   push();
   fill(0);
