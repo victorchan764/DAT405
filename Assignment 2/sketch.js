@@ -47,7 +47,7 @@ function centerCanvas() {
 
   weatherVar();
 
-  /* Orientation vent */
+  // Orientation
   angleMode(DEGREES);
   if (windDegrees === undefined || !windDegrees) windDegrees = 0;
   xDirection = sin(windDegrees);
