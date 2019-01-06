@@ -18,7 +18,7 @@ let weather,
 
 let r = 0;
 
-//This variable is for updating the unix timestamp into an Epoch date
+//These variable are for updating the unix timestamp into an Epoch date
 let epochUpdate, update, updateText;
 //These variables dictate the size of the circles and the direction of where they move around
 let xDir, yDir, unit, countX, countY, size;
@@ -127,7 +127,7 @@ function draw() {
 }
 
 function fixed(x,y) {
-  strokeWeight(0);
+  strokeWeight(1);
   stroke(255,255,255,30);
   noFill();
 }
