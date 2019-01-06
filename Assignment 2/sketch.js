@@ -54,7 +54,7 @@ function centerCanvas() {
 
   // Default anglemode is RADIANS but is now set to DEGREES
   angleMode(DEGREES);
-  //Setting the linear motion of the circles based on the weather.wind.deg function
+  //Setting the linear motion of the circles based on the weather.wind.deg API call
   if (windDegrees === undefined || !windDegrees) windDegrees = 0;
   xDirection = sin(windDegrees);
   yDirection = -cos(windDegrees);
