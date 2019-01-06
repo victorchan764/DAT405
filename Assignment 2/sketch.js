@@ -53,7 +53,7 @@ function setup() {
   alpha = visibility;
   c = color(0, 0, 0, alpha);
 
-  // Converts the Epoch timestamp into the current date */
+  // Converts the Epoch timestamp into the most recent time the weather in the specifc location has last been updated */
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
 
