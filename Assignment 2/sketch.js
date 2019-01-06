@@ -107,7 +107,7 @@ function draw() {
   //text(deviceOrientation, 20, 30);
   //the location is displayed at the bottom left of the canvas
   text(cityName + " / " + country, 20, height - 30);
-  textAlign(CENTER);
+  textAlign(LEFT);
   text(
   //The weather information is displayed in the bottom middle of the canvas
     weatherDescription + " / " + weatherId + " / " + windSpeed + "m/s",
