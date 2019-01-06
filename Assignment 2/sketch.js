@@ -118,7 +118,7 @@ function draw() {
   text(updateText, width - 20, height - 30);
   pop();
 
-//Frame starts in top left corner
+//Frame starts in top left corner of canvas
   let ep = 5;
   frame(0,0,width,ep);
   frame(0,0,ep,height);
