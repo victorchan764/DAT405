@@ -23,7 +23,7 @@ let epochUpdate, update, updateText;
 //These variables dictate the size of the circles and the direction of where they move around
 let xDir, yDir, unit, countX, countY, size;
 let c;
-
+y
 
 function preload() {
   //The text/string object is formatted with the location we want to use, and our unique API key
