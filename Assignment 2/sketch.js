@@ -1,5 +1,8 @@
 //Specify Town or city; Must be an appropriate location
+let createInput;
 let city = createInput();
+
+let input, button;
 //The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
@@ -75,6 +78,7 @@ function centerCanvas() {
 
   var input, button, cityName;
 
+function createInput(){
   input = createInput();
   input.position(20, 65);
 
@@ -87,9 +91,8 @@ function centerCanvas() {
 
   textAlign(CENTER);
   textSize(50);
-}
 
-function city() {
+
   var name = input.value();
   greeting.html('hello '+cityName+'!');
   input.value('');
@@ -209,4 +212,5 @@ function weatherVar(){
   //Visibility & Humidity
   visibility = map(weather.visibility, 0, 10000, 0, 255);
   humidity = weather.main.humidity;
+}
 }
