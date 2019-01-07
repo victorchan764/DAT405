@@ -49,17 +49,16 @@ function setup() {
 
     button = createButton('submit');
     button.position(input.x + input.width, 65);
-    button.mousePressed(greet);
+    button.mousePressed(city);
 
-    greeting = createElement('h2', 'what city would you like to select?');
-    greeting.position(20, 5);
+    city = createElement('h1', 'what city would you like to select?');
+    city.position(20, 5);
 
     textAlign(CENTER);
-    textSize(50);
+    textSize(5);
 
-function greet() {
+function city() {
     var name = input.value();
-    greeting.html('hello '+name+'!');
     input.value('');
 
     for (var i=0; i<200; i++) {
