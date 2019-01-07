@@ -87,7 +87,7 @@ function draw() {
   ellipseMode(CENTER);
   for (let x = 0; x < countX + 1; x++) {
     for (let y = 0; y < countY + 1; y++) {
-  //saves all current drawing styles and transformations
+  //saves all current drawing styles and transformations below
       push();
       fixed(x,y);
       animate(x, y);
