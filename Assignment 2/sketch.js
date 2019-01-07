@@ -1,5 +1,5 @@
 //Specify Town or city; Must be an appropriate location
-let city = "Yeovil";
+let city = createInput();
 //The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
@@ -71,6 +71,37 @@ function centerCanvas() {
   // Converts the unix timestamp into the most recent time the weather in the specifc location has last been updated */
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
+
+
+  var input, button, cityName;
+
+  input = createInput();
+  input.position(20, 65);
+
+  button = createButton('submit');
+  button.position(input.x + input.width, 65);
+  button.mousePressed(greet);
+
+  greeting = createElement('h2', 'what city would you like to choose?');
+  greeting.position(20, 5);
+
+  textAlign(CENTER);
+  textSize(50);
+}
+
+function greet() {
+  var name = input.value();
+  greeting.html('hello '+city+'!');
+  input.value('');
+
+  for (var i=0; i<200; i++) {
+    push();
+    fill(random(255), 255, 255);
+    translate(random(width), random(height));
+    rotate(random(2*PI));
+    text(name, 0, 0);
+    pop();
+  }
 
 }
 
