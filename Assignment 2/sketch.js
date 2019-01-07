@@ -1,8 +1,5 @@
 //Specify Town or city; Must be an appropriate location
-let createInput;
-let city = createInput();
-
-let input, button;
+let city = "Yeovil";
 //The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
@@ -75,37 +72,6 @@ function centerCanvas() {
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
 
-
-  var input, button, cityName;
-
-function createInput(){
-  input = createInput();
-  input.position(20, 65);
-
-  button = createButton('submit');
-  button.position(input.x + input.width, 65);
-  button.mousePressed(city);
-
-  greeting = createElement('h2', 'what city would you like to choose?');
-  greeting.position(20, 5);
-
-  textAlign(CENTER);
-  textSize(50);
-
-
-  var name = input.value();
-  greeting.html('hello '+cityName+'!');
-  input.value('');
-
-  for (var i=0; i<200; i++) {
-    push();
-    fill(random(255), 255, 255);
-    translate(random(width), random(height));
-    rotate(random(2*PI));
-    text(name, 0, 0);
-    pop();
-  }
-
 }
 
 function draw() {
@@ -121,7 +87,7 @@ function draw() {
   ellipseMode(CENTER);
   for (let x = 0; x < countX + 1; x++) {
     for (let y = 0; y < countY + 1; y++) {
-  //saves all current drawing styles and transformations below
+  //saves all current drawing styles and transformations
       push();
       fixed(x,y);
       animate(x, y);
@@ -212,5 +178,4 @@ function weatherVar(){
   //Visibility & Humidity
   visibility = map(weather.visibility, 0, 10000, 0, 255);
   humidity = weather.main.humidity;
-}
 }
