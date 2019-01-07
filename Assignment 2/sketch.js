@@ -48,7 +48,7 @@ function centerCanvas() {
   cnv.position(x, y);
 }
 
-  //Extract data from weather variable
+  //Extract data from weather API call
   weatherVar();
 
   // Default anglemode is RADIANS but is now set to DEGREES
