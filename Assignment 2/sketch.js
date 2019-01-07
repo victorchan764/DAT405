@@ -1,5 +1,5 @@
 //Specify Town or city; Must be an appropriate location
-let city = "Berlin";
+let city = "London";
 //The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
