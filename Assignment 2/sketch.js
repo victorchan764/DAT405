@@ -80,7 +80,7 @@ function centerCanvas() {
 
   button = createButton('submit');
   button.position(input.x + input.width, 65);
-  button.mousePressed(greet);
+  button.mousePressed(city);
 
   greeting = createElement('h2', 'what city would you like to choose?');
   greeting.position(20, 5);
@@ -89,9 +89,9 @@ function centerCanvas() {
   textSize(50);
 }
 
-function greet() {
+function city() {
   var name = input.value();
-  greeting.html('hello '+city+'!');
+  greeting.html('hello '+cityName+'!');
   input.value('');
 
   for (var i=0; i<200; i++) {
