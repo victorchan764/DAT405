@@ -24,7 +24,6 @@ let epochUpdate, update, updateText;
 let xDir, yDir, unit, countX, countY, size;
 let c;
 
-
 function preload() {
   //The text/string object is formatted with the location we want to use, and our unique API key
   let url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
