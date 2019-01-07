@@ -39,7 +39,7 @@ function setup() {
   cnv = createCanvas(1280, 720);
   centerCanvas();
 
-  //Define canvas variable so that canvas can be centered
+//Define canvas variable so that canvas can be centered
   var cnv;
 
 //Function for centering canvas
