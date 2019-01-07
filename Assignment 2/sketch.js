@@ -1,5 +1,5 @@
 //Specify Town or city; Must be an appropriate location
-let city = "London";
+let city = "Berlin";
 //The API key is given by the openweathermap.org website (using the one already provided to us)
 let apiKey = "6b4a465ac9894c63172283b3f271c20c";
 //Declare and call variables for API response
@@ -71,6 +71,7 @@ function centerCanvas() {
   // Converts the unix timestamp into the most recent time the weather in the specifc location has last been updated */
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
+
 }
 
 function draw() {
