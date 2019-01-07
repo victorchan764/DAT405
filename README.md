@@ -1,4 +1,2 @@
 # dat405
-This is a message for GitHub
-test
-update
+This is the GitHub page for Victor Chan
