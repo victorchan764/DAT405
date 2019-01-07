@@ -42,35 +42,6 @@ function setup() {
   //Define canvas variable so that canvas can be centered
   var cnv;
 
-  var input, button, city;
-
-    input = createInput();
-    input.position(20, 65);
-
-    button = createButton('submit');
-    button.position(input.x + input.width, 65);
-    button.mousePressed(city);
-
-    city = createElement('h1', 'what city would you like to select?');
-    city.position(20, 5);
-
-    textAlign(CENTER);
-    textSize(5);
-
-function city() {
-    var name = input.value();
-    input.value('');
-
-    for (var i=0; i<200; i++) {
-      push();
-      fill(random(255), 255, 255);
-      translate(random(width), random(height));
-      rotate(random(2*PI));
-      text(name, 0, 0);
-      pop();
-    }
-  }
-
 //Function for centering canvas
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
