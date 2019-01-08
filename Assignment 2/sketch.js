@@ -67,7 +67,7 @@ function centerCanvas() {
   alpha = visibility;
   c = color(0, 0, 0, alpha);
 
-  // Converts the unix timestamp into the most recent time the weather in the specifc location has last been updated */
+  // Converts the unix timestamp into the most recent time the weather in the specifc location has last been updated
   update = new Date(epochUpdate * 1000);
   updateText = update.getHours() + ":" + update.getMinutes();
 
@@ -80,7 +80,7 @@ function draw() {
   r = r + windRatio;
   if (r > 2) r = 0;
   speed = round(r * PI * 100) / 100;
-
+  //Generates the circles and places them inside an invisivble square and they move in a linear movement 
   angleMode(RADIANS);
   rectMode(CENTER);
   ellipseMode(CENTER);
