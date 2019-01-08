@@ -120,7 +120,7 @@ function draw() {
   text(updateText, width - 20, height - 30);
   pop();
 
-//Frame starts in top left corner of canvas
+//Frame starts in top left corner of canvas which is centered
   let ep = 5;
   frame(0,0,width,ep);
   frame(0,0,ep,height);
