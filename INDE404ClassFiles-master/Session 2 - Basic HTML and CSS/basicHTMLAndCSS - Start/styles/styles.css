@@ -35,3 +35,15 @@ header .logo h1{
 header .logo h2{
   font-size: 14px;
 }
+
+header nav{
+  float: right;
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+}
+
+header nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
