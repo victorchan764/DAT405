@@ -51,5 +51,9 @@ header nav ul{
 header nav ul li{
   display: inline;
   margin-right: 25px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
+}
+
+header nav ul li.last{
+  margin-right: 0;
 }
