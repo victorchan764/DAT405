@@ -27,3 +27,11 @@ header .logo h2{
   margin: 0;
   padding: 0;
 }
+
+header .logo h1{
+  font-size: 36px;
+}
+
+header .logo h2{
+  font-size: 14px;
+}
