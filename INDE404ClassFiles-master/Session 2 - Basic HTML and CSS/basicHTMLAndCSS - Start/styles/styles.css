@@ -87,3 +87,9 @@ main .welcomeText p{
   width: 1000px;
   margin: 0px auto;
 }
+
+main .buildingCard{
+  width: 250px;
+  float: left;
+  background-color: #ccc;
+}
