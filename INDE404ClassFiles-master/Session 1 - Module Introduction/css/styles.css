@@ -1,0 +1,53 @@
+body{
+  margin: 0;/*Reset margin to 0*/
+  padding: 0;/*Reset padding to 0*/
+  border: 0;/*Reset border to 0*/
+  background-color: #6e6e6e;/* Sets background colour */
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); /*Loads and external file as a background image, it is a .png file, so has transparent capabilities*/
+
+}
+
+header{
+  height: 150px;
+  padding:20px 0px;
+  width: 100%;
+  background-color: #4C678C;
+  text-align: center;
+}
+/*Basic size and text styles for the header tag */
+
+h1{
+  color: #ccd;
+}
+
+.contentContainer{
+  width: 1000px;
+  margin: 0px auto;
+}
+/* Selects any element with the class of contentContainer, and applies the declared styles to it*/
+
+.bodyContent{
+  width: 100%:
+}
+
+.bodyContent > p{
+  float: left; */ We use float to align elements on the same "line"*/
+  width: 400px;
+  margin: 50px;
+}
+/* This selects any element with the class of bodyContent, and applies the delcared styles to any p tag within it */
+
+.bodyContent > img{
+  float: left;
+  width: 400px;
+  height: auto;
+  margin: 50px;
+}
+
+footer{
+  clear: both; /*We use clear to remove this element from the flow of the floated elements before it*/
+  background-color: purple;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+}
