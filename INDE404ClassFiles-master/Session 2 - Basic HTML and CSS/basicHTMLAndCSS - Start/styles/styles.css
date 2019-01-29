@@ -57,3 +57,33 @@ header nav ul li{
 header nav ul li.last{
   margin-right: 0;
 }
+
+main .banner img{
+  width: 1000px;
+}
+
+main .welcomeText{
+  padding: 30px: 0;
+  border-top 1px solid #dedede;
+  border-bottom 1px solid #dedede;
+  text-align: center;
+}
+
+main .welcomeText h1{
+  font-size: 36px;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+main .welcomeText p{
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1.8em;
+}
+
+.wrapper{
+  width: 1000px;
+  margin: 0px auto;
+}
