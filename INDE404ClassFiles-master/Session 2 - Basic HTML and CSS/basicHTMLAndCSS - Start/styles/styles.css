@@ -93,3 +93,7 @@ main .buildingCard{
   float: left;
   background-color: #ccc;
 }
+
+main .buildingCard img{
+  width: 100%;
+}
