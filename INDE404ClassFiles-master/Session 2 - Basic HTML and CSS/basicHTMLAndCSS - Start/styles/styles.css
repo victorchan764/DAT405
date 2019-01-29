@@ -4,3 +4,17 @@ body{
   margin:0;
   padding:0;
 }
+
+a{
+  outline:none;
+  text-decoraction:none;
+  color: #979797
+}
+
+a:hover{
+  font-weight: bold;
+}
+
+header .logo{
+  padding: 20px 0 0 0;
+}
