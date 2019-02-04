@@ -1,0 +1,101 @@
+body {
+    font-family: arial, sans-serif;
+    color: #979797;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: #979797;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+header .logo {
+    padding: 20px 0 0 0;
+    float: left;
+}
+
+header .logo h1,
+header .logo h2 {
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .logo h1 {
+    font-size: 36px;
+}
+
+header .logo h2 {
+    font-size: 14px;
+}
+
+
+header nav {
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+header nav ul li.last {
+    margin-right: 0;
+}
+
+main .banner img {
+    width: 1000px;
+}
+
+main .welcomeText {
+    padding: 30px 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    text-align: center;
+}
+
+main .welcomeText h1 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+main .welcomeText p {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 1.8em;
+}
+
+
+.wrapper {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+main .buildingCard {
+    width: 250px;
+    float: left;
+    background-color: #ccc;
+}
+
+main .buildingCard img {
+    width: 100%;
+}
