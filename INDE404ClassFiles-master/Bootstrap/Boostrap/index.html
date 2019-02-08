@@ -1,51 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>SandBox Template!</title>
+    <title>Plymouth Uni Buildings</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
-
   <body>
-    <div class = "container">
-      <div class = "row" >
-        <div class = "col" >
-          <h1>This is a heading</h1>
-          <p class = "text-uppercase text-center pl-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis dui metus, in volutpat magna porttitor ut. Praesent imperdiet
-            congue blandit. Aenean mollis felis non varius finibus. Aliquam sed tellus non ex volutpat eleifend. Cras accumsan euismod diam, et ultrices dui
-            porta id. Curabitur sit amet ornare massa. Aenean eget nisl ornare, porta dui in, lacinia leo. Duis sit amet dui eget ligula suscipit
-            fermentum vel vel augue. Aliquam id nisl metus. Vestibulum dignissim quam non ullamcorper finibus. Pellentesque suscipit, tellus
-            ac pellentesque mattis, purus enim semper erat, sed iaculis ligula ipsum a nisi. Cras aliquet magna eget ex euismod porttitor.</p>
+    <nav>
+      <a href="#">Plymouth Uni</a>
+      <ul>
+        <li>
+          <a href="#">Buildings</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <img src="assets/img/slider.jpg">
+      <h1>Plymouth University</h1>
+      <hr>
+      <h2> Get to know our Buildings on Campus</h2>
+    </header>
+    <section>
+      <h2>Our Buildings</h2>
+      <hr>
+        <div>
+          <a href="#">
+            <img src="assets/img/babbage.jpg">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="assets/img/maryNewman.jpg">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="assets/img/rlb.jpg">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="assets/img/theHouse.jpg">
+          </a>
+        </div>
+    </section>
+    <section>
+        <h2>About</h2>
+        <hr>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa ex, malesuada quis dui eu, aliquam hendrerit dui. Pellentesque sed quam elit. Mauris tristique convallis libero et iaculis.</p>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa ex, malesuada quis dui eu, aliquam hendrerit dui. Pellentesque sed quam elit. Mauris tristique convallis libero et iaculis!</p>
+        </div>
+        <div>
+          <a href="#">
+            Contact Us For More Info
+          </a>
+        </div>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <hr>
+        <form>
+          <div>
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Name" required="required">
           </div>
-
-          <div class = "col" >
-          <img src = "https://s0.geograph.org.uk/geophotos/01/04/33/1043358_cb5051ef.jpg"
-          class="img-fluid w-50 mx-5 d-block" alt="Responsive image">
-        </div>
+          <div>
+              <label>Email Address</label>
+              <input id="email" type="email" placeholder="Email Address" required="required">
+          </div>
+          <div>
+              <label>Phone Number</label>
+              <input id="phone" type="tel" placeholder="Phone Number" required="required">
+          </div>
+          <div>
+              <label>Message</label>
+              <textarea id="message" rows="5" placeholder="Message" required="required"></textarea>
+          </div>
+          <div>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+    </section>
+    <footer>
+      <div>
+        <h4>Address</h4>
+        <p>Drakes Circus
+        <br>
+        Plymouth, PL4 8AA</p>
       </div>
+      <div>
+        <h4>Social Media</h4>
+        <ul>
+          <li>
+            <a href="#">
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Google +</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>About This Page</h4>
+        <p></p>
+      </div>
+    </div>
+    </footer>
 
-        <div class = "row" >
-            <div class = "col-12 col-sm-6 col-md-4 col-lg-2 backgroundRed"> </div>
-            <div class = "col-12 col-sm-6 col-md-4 col-lg-4 backgroundBlue"> </div>
-            <div class = "col-12 col-sm-6 col-md-4 col-lg-4 backgroundRed"> </div>
-            <div class = "col-12 col-sm-6 col-md-4 col-lg-2 backgroundBlue"> </div>
-        </div>
+    <div>
+      <small>Copyright &copy; <span id="autoDate"></span></small>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 
 </html>
