@@ -26,3 +26,8 @@ footer{
 .btn-primary{
   background-color: #bada55;
 }
+.hvr-sweep-to-right,
+.hvr-sweep-to-left,
+.hvr-pop{
+  background-color: green
+}
