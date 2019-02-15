@@ -1,7 +1,7 @@
 var feed = new Instafeed({
   get: 'user',
   userId: '1475372546  ',
-  accessToken: '1475372546.d3402f4.827385c9f5cb4c558de49b5d623ceb5a ',
+  accessToken: '1475372546.d3402f4.827385c9f5cb4c558de49b5d623ceb5a',
   filter: function(image) {
   var MAX_LENGTH = 40;
 
