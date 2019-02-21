@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$(".fullscreen").css("height", window_height)
 	$(".fitscreen").css("height", fitscreen);
 
-     
+
      // -------   Active Mobile Menu-----//
 
     $(".menu-bar").on('click', function(e){
@@ -21,7 +21,7 @@ $(document).ready(function(){
         $("span", this).toggleClass("lnr-menu lnr-cross");
         $(".main-menu").addClass('mobile-menu');
     });
-     
+
     $('select').niceSelect();
     $('.img-pop-up').magnificPopup({
         type: 'image',
@@ -29,17 +29,8 @@ $(document).ready(function(){
         enabled:true
         }
     });
-    $('.play-btn').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
-    
     $(document).ready(function() {
         $('#mc_embed_signup').find('form').ajaxChimp();
-    });      
+    });
 
  });
