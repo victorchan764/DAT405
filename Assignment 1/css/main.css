@@ -95,10 +95,7 @@ a, a:focus, a:hover {
   padding: 60px;
 }
 
-/**
- *  Typography
- *
- **/
+/** Typography **/
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   font-size: 1em;
   line-height: inherit;
