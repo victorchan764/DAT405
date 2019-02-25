@@ -1366,7 +1366,7 @@ nav a:hover {
 }
 
 .banner-area .height {
-  height: 600px;
+  height: 500px;
 }
 
 .banner-area .generic-height {
@@ -1556,39 +1556,6 @@ nav a:hover {
   width: 1320px;
   height: 550px;
   z-index: 83;
-}
-
-.video-area {
-  position: relative;
-  background: url(../img/video-area-bg.jpg) no-repeat center center/cover;
-}
-
-.video-area .overlay-bg {
-  background-image: -moz-radial-gradient(50% 50%, circle closest-side, #7539dd 0%, #7034db 100%);
-  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #7539dd 0%, #7034db 100%);
-  background-image: -ms-radial-gradient(50% 50%, circle closest-side, #7539dd 0%, #7034db 100%);
-  opacity: .8;
-}
-
-.video-area .video-content {
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.video-area .video-content h4 {
-  font-size: 24px;
-  line-height: 1.15em;
-}
-
-.video-area .video-content p {
-  margin-bottom: 0;
-}
-
-.video-area .video-content a {
-  display: inline-block;
-  margin-bottom: 20px;
 }
 
 .blog-area {
