@@ -1392,7 +1392,7 @@ nav a:hover {
 }
 
 .about-title h2 {
-  font-size: 36px;
+  font-size: 60px;
   line-height: 1.15em;
   font-weight: 600;
   margin-bottom: 10px;
@@ -1538,8 +1538,8 @@ nav a:hover {
   height: 100%;
   background: url(../img/story-bg.jpg) no-repeat center top/cover;
   background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: right; 
+  background-size: 400px;
+  background-position: right;
   z-index: 1;
 }
 
