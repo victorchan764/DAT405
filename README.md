@@ -1,2 +1,2 @@
 # dat405
-This is the GitHub page for Victor Chan
+This is the README for the DAT405 Module for Victor Chan
